@@ -1,0 +1,14 @@
+{% extends 'generic/base.html' %}
+
+<title>{% block title %} Project Detail{% endblock title %}</title>
+
+{% block content %}
+
+<h2>{{ project.title }}</h2>
+<img src="{{ project.image.url }}" alt="{{ project.alttext }}" height="500">
+<h3>{{ project.technologies }}</h3>
+<h3>{{ project.description }}</h3>
+
+<a href="{% url 'home' %}">Return to Projects</a>
+
+{% endblock content %}
